@@ -34,10 +34,10 @@ jobs:
 
     - name: Terraform Plan
       run: terraform plan \
-        -var="db_username=${{ secrets.TF_VAR_DOCKERHUB_USERNAME }}" \
-        -var="db_password=${{ secrets.TF_VAR_DOCKERHUB_TOKEN }}"
+        -var="DOCKERHUB_USERNAME=${{ secrets.TF_VAR_DOCKERHUB_USERNAME }}" \
+        -var="DOCKERHUB_TOKEN=${{ secrets.TF_VAR_DOCKERHUB_TOKEN }}"
 
     - name: Terraform Apply
       run: terraform apply -auto-approve \
-        -var="db_username=${{ secrets.TF_VAR_DOCKERHUB_USERNAME }}" \
-        -var="db_password=${{ secrets.TF_VAR_DOCKERHUB_TOKEN }}"
+        -var="DOCKER_USERNAME=${{ secrets.TF_VAR_DOCKERHUB_USERNAME }}" \
+        -var="DOCKERHUB_TOKEN=${{ secrets.TF_VAR_DOCKERHUB_TOKEN }}"
