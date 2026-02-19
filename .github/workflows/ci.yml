@@ -30,9 +30,9 @@ jobs:
     - name: Tag Image
       run: |
         docker tag strapi:latest \
-        811738710312.dkr.ecr.ap-south-1.amazonaws.com/strapi:latest
+        811738710312.dkr.ecr.ue-east-1.amazonaws.com/strapi:latest
 
     - name: Push Image to ECR
       run: |
         docker push \
-        811738710312.dkr.ecr.ap-south-1.amazonaws.com/strapi:latest
+        811738710312.dkr.ecr.us-east-1.amazonaws.com/strapi:latest
