@@ -33,13 +33,13 @@ jobs:
       run: terraform init
 
     - name: Terraform Plan
-       env:
+      env:
        TF_VAR_DOCKERHUB_USERNAME: ${{ secrets.TF_VAR_DOCKERHUB_USERNAME }}
        TF_VAR_DOCKERHUB_TOKEN: ${{ secrets.TF_VAR_DOCKERHUB_TOKEN }}
       run: terraform plan
 
     - name: Terraform Apply
-       env:
+      env:
        TF_VAR_DOCKERHUB_USERNAME: ${{ secrets.TF_VAR_DOCKERHUB_USERNAME }}
        TF_VAR_DOCKERHUB_TOKEN: ${{ secrets.TF_VAR_DOCKERHUB_TOKEN }}
       run: terraform apply -auto-approve
