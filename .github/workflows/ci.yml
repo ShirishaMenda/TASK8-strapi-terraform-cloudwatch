@@ -25,9 +25,9 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build \
-        -t 1383-8365-7644.dkr.ecr.us-east-1.amazonaws.com/strapi:latest .
+        -t 138383657644.dkr.ecr.us-east-1.amazonaws.com/strapi:latest .
 
     - name: Push Image
       run: |
        docker push \
-       1383-8365-7644.dkr.ecr.us-east-1.amazonaws.com/strapi:latest
+       138383657644.dkr.ecr.us-east-1.amazonaws.com/strapi:latest
